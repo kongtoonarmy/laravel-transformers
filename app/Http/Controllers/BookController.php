@@ -43,6 +43,8 @@ class BookController extends Controller
     {	
 		$fractal = new Manager();
 
+        $fractal->parseIncludes('author');
+
     	$books = Book::all();
 
     	$resource = new Collection($books, new BookTransformer);

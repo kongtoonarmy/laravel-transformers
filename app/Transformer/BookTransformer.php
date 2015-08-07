@@ -21,9 +21,15 @@ class BookTransformer extends TransformerAbstract
 	    ];
 	}
 
-	public function includeAuthor(Book $book)
+	public function includeAuthor()
     {
-        $author = $book->author;
+        $author = [
+			'id' => '1',
+			'author_name' => 'Philip K Dick',
+			'author_email' => 'philip@example.org',
+		];
+
+		$author = (object) $author;
 
         return $this->item($author, new AuthorTransformer);
     }
