@@ -11,8 +11,7 @@ class AuthorTransformer extends TransformerAbstract
 	public function transform($author)
 	{
 	    return [
-	        'authorName' => $author->author_name,
-	        'authorEmail' => $author->author_email
+	        'authorName' => $author
 	    ];
 	}
 }

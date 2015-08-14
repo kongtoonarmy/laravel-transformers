@@ -57,6 +57,7 @@ class BookController extends Controller
 		$fractal = new Manager();
 
     	$book = Book::all()->random(1);
+        //$book = Book::find(1);
 
     	$resource = new Item($book, new BookTransformer);
 
